@@ -1,0 +1,122 @@
+ion-content.fondo-con-imagen::part(scroll) {
+    background: url('../../../assets/background-warning.jpg') no-repeat center center / cover;
+  }
+  .contenedor-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+  }
+  
+  .tarjeta-login {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 30px 20px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .imagen-login {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .item-input {
+    background: transparent;
+    margin-bottom: 10px;
+  }
+  
+  .boton-ingresar {
+    margin-top: 15px;
+  }
+  
+  .registro-usuarios {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .icono {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+    border: none;
+    color: white;
+  }
+  
+  .icono img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+  }
+  
+  .boton-ingresar {
+    --background: transparent;
+    --box-shadow: none;
+    --color: transparent;
+    padding: 0;
+    height: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .icono-boton {
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
+  }
+  
+  
+  ion-item {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    --inner-padding-end: 10px;
+    --min-height: 60px;
+  }
+  
+  .icono-radio {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-right: 200px;
+  }.titulo-bienvenido {
+    font-size: 24px;
+    color: black;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  ion-item {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    --inner-padding-end: 10px;
+    --min-height: 60px;
+    color: black;
+  }
+  
+  ion-label {
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .icono-radio {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-right: 40px;
+  }

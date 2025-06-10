@@ -1,0 +1,82 @@
+<ion-fab slot="fixed" vertical="top" horizontal="center"  style="margin-top: 20px;">
+  <ion-fab-button (click)="cerrarSesion()">
+    <div class="imagen-icon-container">
+    </div>
+  </ion-fab-button>
+</ion-fab>
+
+<ion-fab slot="fixed" vertical="top" horizontal="center" style="margin-top: 20px;">
+  <ion-fab-button [disabled]="botonesBloqueados" (click)="cerrarSesion()">
+    <div class="imagen-icon-container"></div>
+  </ion-fab-button>
+</ion-fab>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <!-- Estado -->
+    <h1 class="estado-alarma">
+      {{ isPlaying ? 'Desactiva con tu clave' : '' }}
+    </h1>
+
+    <!-- Solo visible cuando la alarma está activa -->
+    <div *ngIf="isPlaying" class="alarma-control">
+      <ion-item class="input-clave">
+        <ion-icon slot="start" name="key-outline"></ion-icon>
+        <ion-input 
+        
+          [(ngModel)]="claveIngresada"
+          type="password"
+          placeholder="Ingresar clave">
+        </ion-input>
+      </ion-item>
+
+      <ion-button [disabled]="botonesBloqueados" expand="block" shape="round" color="danger" (click)="apagarAlarma()">
+        Apagar alarma
+      </ion-button>
+    </div>
+
+    <!-- Lottie animación -->
+    <div (click)="togglePlayPause()">
+      <ng-lottie
+        class="bounce-in-top"
+        [options]="options"
+        (animationCreated)="onAnimationCreated($event)">
+      </ng-lottie>
+    </div>
+
+  </div>
+</ion-content>
+
+<!-- 
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <h1 class="estado-alarma">
+      {{ isPlaying ? 'Desactiva con tu clave' : 'Toque para activar la alarma TEST: {{}}' }}
+    </h1>
+    <div *ngIf="isPlaying" class="alarma-control">
+      <ion-item class="input-clave">
+        <ion-icon slot="start" name="key-outline"></ion-icon>
+        <ion-input
+          [(ngModel)]="claveIngresada"
+          type="password"
+          placeholder="Ingresar clave">
+        </ion-input>
+      </ion-item>
+
+      <ion-button expand="block" shape="round" color="danger" (click)="apagarAlarma()">
+        Apagar alarma
+      </ion-button>
+    </div>
+
+    <ion-button (click)="probarLinterna()">Probar linterna</ion-button>
+
+    <div (click)="togglePlayPause()">
+      <ng-lottie
+        class="bounce-in-top"
+        [options]="options"
+        (animationCreated)="onAnimationCreated($event)">
+      </ng-lottie>
+    </div>
+
+  </div>
+</ion-content> -->
